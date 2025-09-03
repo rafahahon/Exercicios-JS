@@ -1,4 +1,4 @@
-//JS é uma linguagem não typada, ou seja, não precisamos declara o tipo da variável
+//JS é uma linguagem não tipada, ou seja, não precisamos declara o tipo da variável
 //declaração de variável, pode ser com var ou let (let > var)
 
 let nome = "Rafaella" // o javascript nao requer ;
