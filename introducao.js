@@ -1,0 +1,114 @@
+//JS é uma linguagem não typada, ou seja, não precisamos declara o tipo da variável
+//declaração de variável, pode ser com var ou let (let > var)
+
+let nome = "Rafaella" // o javascript nao requer ;
+let idade = 18 // let e a declaracao de variaveis
+const idade2 = 18 // const e a declaracao de constantes 
+
+console.log("Ola, meu nome e " + nome + ", tenho " + idade + " anos.") // concatenacao texto + variavel 
+// console.log funciona como o print
+
+let mensagem = `Ola, meu nome e ${nome}` 
+
+// alert(mensagem) // exibe a mensagem(variavel) como pop-up
+
+console.log(typeof mensagem) // retorna o tipo da variavel
+console.log(typeof idade)
+
+let profissao
+console.log(typeof profissao) // vai retornar undefined, ou seja, a variavel nao tem nenhum valor
+
+let endereco = null
+console.log(typeof endereco)
+
+console.log(idade === 1) // tres sinais de igual vai analisar o que esta escrito e o tipo (significa exatamente)
+
+// ESTRUTURA CONDICIONAL 
+
+// IF / ELSE
+
+let temperatura = 12
+
+if(temperatura > 25) {
+    console.log("Esta calor")
+} else {
+    console.log("Esta frio")
+}
+
+let nomeUsuario = prompt("Digite seu nome") // prompt funciona como o input ou scanner do java, ele recebe as informacoes do usuario
+alert("Seu nome e: " + nomeUsuario)
+
+// IF / ELSE IF / ELSE
+
+let nota = parseInt(prompt("Digite sua nota")) // parseInt converte o valor recebido para int 
+
+if(nota > 6) { // se
+    console.log("Aprovado")
+} else if(nota >= 5) { // senao se
+    console.log("Esta de recuperacao")
+} else { // senao
+    console.log("Esta reprovado")
+}
+
+// IF TERNARIO (if de uma linha so)
+
+let saldo = 90
+
+let podeComprar = saldo >= 100 ? "Compra aprovada" : "Valor insuficiente" // validacao, if else dentro da propria variavel
+                            // depois do ? vem o valor se verdadeiro, e depois dos : vem o false
+
+/* 
+ !EQUIVALENTE A
+if(saldo >= 100) {
+    podeComprar = "Compra aprovada"
+} else {
+    podeComprar = "Saldo insuficiente"
+}
+*/
+
+console.log(podeComprar)
+
+// CONDICIONAL ANINHADA
+// multiplas verificacoes
+
+let hora = 8
+let diaDaSemana = "terca"
+
+if(hora >= 6 && hora < 12) { // se as duas condicoes forem verdadeiras 
+    console.log("Bom dia!")
+} else {
+    if(hora >= 12 && hora < 18) {
+        if(diaDaSemana == "segunda") {
+            console.log("Boa tarde! Otima semana!")
+        } else {
+            console.log("Boa tarde!")
+        }
+    } else {
+        console.log("Boa noite!")
+    }
+}
+
+// SWITCH CASE
+
+let dia = 2
+
+switch(dia) { // switch do js aceita strings
+    case 1:
+        console.log("Domingo")
+        break
+    case 2: 
+        console.log("Segunda-feira")
+        break
+    case 3:
+        console.log("Terca-feira")
+        break
+    case 4:
+        console.log("Quarta-feira")
+        break
+    case 5:
+        console.log("Quinta-feira")
+        break
+    default: // else, opcao padrao
+        console.log("Dia invalido")
+        break
+}
