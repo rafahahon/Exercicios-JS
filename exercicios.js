@@ -114,23 +114,112 @@ if(numero1Usuario > numero2Usuario && numero1Usuario > numero3Usuario) {
 
 // ! Exercicio 3: Desconto em compras:
 
+/*
 let valorDaCompra = prompt("Digite o valor da compra: ")
 
 if(valorDaCompra > 100) {
-    let desconto = valorDaCompra / (valorDaCompra*100)
+    let desconto = valorDaCompra - (valorDaCompra*0.10)
     console.log(desconto)
 } else {
     console.log("Compra não recebe desconto: " + valorDaCompra + ".")
 }
+*/
 
 // ! Exercicio 4: Sistema de login simples:
+
+/*
+let nomeUsuario = prompt("Digite o nome de usuário: ")
+let senhaUsuario = prompt("Digite sua senha: ")
+
+if(nomeUsuario == "admin" && senhaUsuario == "1234") {
+    console.log("Login bem-sucedido.")
+} else {
+    console.log("Acesso negado.")
+}
+*/
 
 // ! Nível avançado
 
 // ! Exercicio 1: Classificação de triângulos:
 
+/*
+let lado1 = prompt("Insira o lado 1: ")
+let lado2 = prompt("Insira o lado 2: ")
+let lado3 = prompt("Insira o lado 3: ")
+
+if(lado1 == lado2 && lado1 == lado3 && lado2 == lado3){
+    console.log("Triângulo equilátero.")
+} else if(lado1 == lado2 && lado1 != lado3){
+    console.log("Triângulo isósceles.")
+} else if(lado1 == lado3 && lado1 != lado2){
+    console.log("Triângulo isósceles.")
+} else if(lado2 == lado1 && lado2 != lado3){
+    console.log("Triângulo isósceles.")
+} else if(lado2 == lado3 && lado2 != lado1){
+    console.log("Triângulo isósceles.")
+} else if(lado3 == lado1 && lado3 != lado2){
+    console.log("Triângulo isósceles.")
+} else if(lado3 == lado2 && lado3 != lado1){
+    console.log("Triângulo isósceles.")
+} else {
+    console.log("Triângulo escaleno.")
+}
+*/
+
 // ! Exercicio 2: Conversão de notas para conceitos:
+
+/*
+let notaUsuario = prompt("Digite sua nota: ")
+
+if(notaUsuario < 60){
+    notaUsuario = ("F")
+    console.log(notaUsuario)
+} else if(notaUsuario >= 60 && notaUsuario < 70){
+    notaUsuario = ("D")
+    console.log(notaUsuario)
+} else if(notaUsuario >= 70 && notaUsuario < 80){
+    notaUsuario = ("B")
+    console.log(notaUsuario)
+} else if(notaUsuario >= 80 && notaUsuario < 90){
+    notaUsuario = ("C")
+    console.log(notaUsuario)
+} else {
+    notaUsuario = ("A")
+    console.log(notaUsuario)
+}
+*/
 
 // ! Exercicio 3: Cálculo de IMC:
 
+/*
+let pesoUsuario = parseFloat(prompt("Digite seu peso: "))
+let alturaUsuario = parseFloat(prompt("Digite sua altura: "))
+
+let imc = pesoUsuario / (alturaUsuario*alturaUsuario)
+
+if(imc < 17) {
+    console.log("Muito abaixo do peso.")
+} else if(imc >= 17 && imc < 19) {
+    console.log("Abaixo do peso.") 
+} else if(imc >= 19 && imc < 25) {
+    console.log("Peso normal.")
+} else if(imc >= 25 && imc < 30) {
+    console.log("Acima do peso.")
+} else if(imc >= 30 && imc < 35) {
+    console.log("Obesidade 1.")
+} else if(imc >= 35 && imc < 40) {
+    console.log("Obesidade 2.")
+} else {
+    console.log("Obesidade 3.")
+}
+*/
+
 // ! Exercicio 4: Validação de ano bissexto:
+
+let anoUsuario = parseFloat(prompt("Digite o ano: "))
+
+if((anoUsuario % 4 == 0 && anoUsuario % 100 != 0) || (anoUsuario % 400 == 0)) {
+    console.log("Bissexto.")
+} else {
+    console.log("Não é bissexto.")
+}
