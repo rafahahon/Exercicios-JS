@@ -103,11 +103,11 @@ let numero1Usuario = parseInt(prompt("Digite o primeiro número: "))
 let numero2Usuario = parseInt(prompt("Digite o segundo número: "))
 let numero3Usuario = parseInt(prompt("Digite o terceiro número: "))
 
-if(numero1Usuario > numero2Usuario && numero1Usuario > numero3Usuario) {
+if(numero1Usuario >= numero2Usuario && numero1Usuario >= numero3Usuario) {
     console.log("O primeiro número é o maior: " + numero1Usuario + ".")
-} else if(numero2Usuario > numero1Usuario && numero2Usuario > numero3Usuario) {
+} else if(numero2Usuario >= numero3Usuario) {
     console.log("O segundo número é o maior: " + numero2Usuario + ".")
-} else if(numero3Usuario > numero1Usuario && numero3Usuario > numero2Usuario) {
+} else {
     console.log("O terceiro número é o maior: " + numero3Usuario + ".")
 }
 */
