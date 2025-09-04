@@ -216,6 +216,7 @@ if(imc < 17) {
 
 // ! Exercicio 4: Validação de ano bissexto:
 
+/*
 let anoUsuario = parseFloat(prompt("Digite o ano: "))
 
 if((anoUsuario % 4 == 0 && anoUsuario % 100 != 0) || (anoUsuario % 400 == 0)) {
@@ -223,3 +224,4 @@ if((anoUsuario % 4 == 0 && anoUsuario % 100 != 0) || (anoUsuario % 400 == 0)) {
 } else {
     console.log("Não é bissexto.")
 }
+*/
