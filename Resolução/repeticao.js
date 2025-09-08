@@ -50,6 +50,7 @@ for(let i = 1; i <= numero; i++){
 
 // ! Exercício 2: Jogo de adivinhação:
 
+/*
 let aleatorio = 8
 let numero = 0
 
@@ -66,14 +67,44 @@ while(aleatorio != numero){
         console.log("Acertou!")
     }
 }
+*/
 
 // ! Exercício 3: Contagem regressiva:
+
+/*
+let numero = parseInt(prompt("Digite um número: "))
+
+while(numero >= 0) {
+    console.log(numero--)
+}
+*/
 
 // ! NÍVEL AVANÇADO 
 
 // ! Exercício 1: Soma dos dígitos de um número:
 
+/*
+let numero = Number(prompt("Digite um número inteiro: ")) // recebe um numero do usuario
+let resultado = 0
+
+if(!Number.isInteger(numero) || numero < 0) { // verifica se o numero e inteiro ou positivo 
+    console.log("Digite um número inteiro!")
+} else {
+
+while(numero > 0) { // enquanto numero for maior que zero
+    let ultimoDigito = numero % 10 // recebe o ultimo digito
+    resultado += ultimoDigito // soma o ultimo digito no resultado
+    numero = Math.floor(numero/10) // retira o ultimo digito do numero
+} 
+console.log("A soma é: " + resultado)
+}
+*/
+
 // ! Exercício 2: Fatorial de um número:
+
+/*
+let numero = prompt("Digite um número inteiro: ")
+*/
 
 // ! Exercício 3: Inverter um número:
 
