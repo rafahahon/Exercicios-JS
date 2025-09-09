@@ -157,4 +157,63 @@ const maiorNumero = numeros.reduce((max, numero) => { // percorre os valores e o
 
     } , numeros[0]
 )
+
+console.log(maiorNumero)
+*/
+
+// Contar a frequência de palavras
+
+/*
+const palavras = ["cereja", "banana", "cereja", "laranja", "banana", "cereja"]
+
+// a contagem percorre as palavras e reduz a um único objeto, o acumulador começa com o objeto vazio, a palavra vai percorrer e o acumulador vai armazenar "maçã" (palavra), ele vai verificar se ja tem maçã (palavra) no objeto e vai somando 1 
+const contagem = palavras.reduce((acumulador, palavra) => {
+    acumulador[palavra] = (acumulador[palavra] || 0) + 1
+    // aqui ele verifica se a palavra já existe, se ela ainda não existir começa em zero e adiciona um, se já existir só adiciona 1 
+    return acumulador
+}, {} // aqui que o acumulador comeca 
+)
+
+console.log(contagem)
+*/
+
+// Calcular média de notas
+
+/*
+const notas = [7, 8, 9, 6, 10]
+                            // vai contar quantos numeros tem dentro, quais os numero e vai dividir pelo tamanho 
+const media = notas.reduce((total, nota) => total + nota, 0) / notas.length
+
+console.log(media)
+*/
+
+// USO COMBINADO
+
+/*
+const usuarios = [
+    {id: 1, nome: "Alice", idade: 25},
+    {id: 2, nome: "Bob", idade: 30},
+    {id: 3, nome: "Carol", idade: 20}
+]
+
+// Filtrar usuários com idade maior que 21
+
+const maioresDeIdade = usuarios.filter(usuario => usuario.idade > 21)
+
+// Encontrar o primeiro usuário com idade maior que 21
+
+const usuarioIdade = usuarios.find(usuario => usuario.idade > 21)
+
+// Criar um array apenas com nomes de usuários
+
+const nomesUsuarios = usuarios.map(usuario => usuario.nome)
+
+// Somar todas as idades dos usuários usando o reduce
+
+const somaIdades = usuarios.reduce((total, usuario) => total + usuario.idade, 0)
+
+console.log("Maiores de idades: ", maioresDeIdade)
+console.log("Primeiro maior de idade: ", usuarioIdade)
+console.log("Nomes de usuarios: ", nomesUsuarios)
+console.log("Soma de idades: ", somaIdades)
 */

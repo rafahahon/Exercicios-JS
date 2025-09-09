@@ -103,10 +103,54 @@ console.log("A soma é: " + resultado)
 // ! Exercício 2: Fatorial de um número:
 
 /*
-let numero = prompt("Digite um número inteiro: ")
+let numero = parseInt(prompt("Digite um número inteiro: "))
+let fator = 1
+
+if (numero < 0 || isNaN(numero)) {
+    console.log("Digite um número inteiro positivo!")
+} else {
+
+    for (let i = 1; i <= numero; i++) {
+        fator *= i
+    } // aqui está fazendo a conta do menor até o n 
+}
+
+console.log(fator)
 */
 
 // ! Exercício 3: Inverter um número:
 
+/*
+let numero = parseInt(prompt("Digite um número inteiro: "))
+let invertido = 0
+
+if (numero < 0 || isNaN(numero)) {
+    console.log("Digite um número inteiro positivo!")
+} else {
+
+    while(numero > 0){
+        let ultimoDigito = numero % 10 // recebe o último dígito
+        invertido = (invertido*10) + ultimoDigito // constrói o novo número, precisa multiplicar por 10 pra ele criar um espaço para o novo número e não somar
+        numero = Math.floor(numero/10) // retira o último dígito do número
+        console.log(invertido)
+    }
+} 
+*/
+
 // ! Exercício 4: Números perfeitos de 1 a 1000:
 
+/*
+for (let n = 1; n <= 1000; n++) {
+    let soma = 0
+
+    for (let d = 1; d < n; d++) {
+        if (n % d === 0) {
+            soma += d
+        }
+    }
+
+    if (soma === n) {
+        console.log("O número " + n + " é perfeito.")
+    }
+}
+*/

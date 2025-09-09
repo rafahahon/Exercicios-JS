@@ -54,7 +54,7 @@
 //     console.log("Fruta: " + fruta)
 // })
 
-// o for vai ser executado até que o i seja maior do que o tamnho do array (length) 
+// o for vai ser executado até que o i seja maior do que o tamanho do array (length) 
 // enumeração começa no 0 e numeração começa no 1
 // for(let i = 0; i < numeros.length; i++) {
 //     console.log("Números: " + numeros[i])
