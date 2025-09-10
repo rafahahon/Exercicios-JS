@@ -1,6 +1,6 @@
-// EXERCÍCIOS ESTRUTURAS DE REPETIÇÃO 
+// EXERCÍCIOS ESTRUTURAS DE REPETIÇÃO
 
-// ! NÍVEL BÁSICO 
+// ! NÍVEL BÁSICO
 
 // ! Exercício 1: Contagem de 1 a 10:
 
@@ -30,11 +30,11 @@ let soma = 0
 
 for(let i = 1; i <= numero; i++) {
     soma += i
-    console.log(i + " " + soma)
+    console.log(i + " + " + numero + " = " + soma)
 }
 */
 
-// ! NÍVEL INTERMEDIÁRIO 
+// ! NÍVEL INTERMEDIÁRIO
 
 // ! Exercício 1: Exibir os números pares de 1 a 50:
 
@@ -51,7 +51,8 @@ for(let i = 1; i <= numero; i++){
 // ! Exercício 2: Jogo de adivinhação:
 
 /*
-let aleatorio = 8
+let aleatorio = Math.floor(Math.random() * 100)
+// Math.floor = arredonda / Math.random = gera números aleatórios de 0 até 1 (sem incluir o 1)
 let numero = 0
 
 while(aleatorio != numero){
@@ -64,7 +65,7 @@ while(aleatorio != numero){
     } else if (numero < aleatorio) {
         console.log("Digite um número maior.")
     } else {
-        console.log("Acertou!")
+        console.log("Acertou! ╰(*°▽°*)╯") // windows + ponto pra adicionar emoji
     }
 }
 */
@@ -74,12 +75,14 @@ while(aleatorio != numero){
 /*
 let numero = parseInt(prompt("Digite um número: "))
 
+console.log(numero)
+
 while(numero >= 0) {
-    console.log(numero--)
+    console.log(--numero) // usar pré-incremento pq primeiro ele vai fazer a operação e depois imprimir
 }
 */
 
-// ! NÍVEL AVANÇADO 
+// ! NÍVEL AVANÇADO
 
 // ! Exercício 1: Soma dos dígitos de um número:
 
@@ -87,15 +90,15 @@ while(numero >= 0) {
 let numero = Number(prompt("Digite um número inteiro: ")) // recebe um numero do usuario
 let resultado = 0
 
-if(!Number.isInteger(numero) || numero < 0) { // verifica se o numero e inteiro ou positivo 
+if(!Number.isInteger(numero) || numero < 0) { // verifica se o numero e inteiro ou positivo
     console.log("Digite um número inteiro!")
 } else {
 
 while(numero > 0) { // enquanto numero for maior que zero
     let ultimoDigito = numero % 10 // recebe o ultimo digito
     resultado += ultimoDigito // soma o ultimo digito no resultado
-    numero = Math.floor(numero/10) // retira o ultimo digito do numero
-} 
+    numero = Math.floor(numero / 10) // retira o ultimo digito do numero
+}
 console.log("A soma é: " + resultado)
 }
 */
@@ -112,7 +115,7 @@ if (numero < 0 || isNaN(numero)) {
 
     for (let i = 1; i <= numero; i++) {
         fator *= i
-    } // aqui está fazendo a conta do menor até o n 
+    } // aqui está fazendo a conta do menor até o n
 }
 
 console.log(fator)
@@ -124,33 +127,39 @@ console.log(fator)
 let numero = parseInt(prompt("Digite um número inteiro: "))
 let invertido = 0
 
-if (numero < 0 || isNaN(numero)) {
-    console.log("Digite um número inteiro positivo!")
-} else {
+let flag_negativo = false
 
-    while(numero > 0){
-        let ultimoDigito = numero % 10 // recebe o último dígito
-        invertido = (invertido*10) + ultimoDigito // constrói o novo número, precisa multiplicar por 10 pra ele criar um espaço para o novo número e não somar
-        numero = Math.floor(numero/10) // retira o último dígito do número
-        console.log(invertido)
-    }
-} 
+if (numero < 0) {
+    numero *= -1
+    flag_negativo = true
+}
+while(numero > 0){
+    let ultimoDigito = numero % 10 // recebe o último dígito
+    invertido = (invertido*10) + ultimoDigito // constrói o novo número, precisa multiplicar por 10 pra ele criar um espaço para o novo número e não somar
+    numero = Math.floor(numero/10) // retira o último dígito do número
+    console.log(invertido)
+}
+
+if(flag_negativo) {
+    invertido *= -1
+}
 */
 
 // ! Exercício 4: Números perfeitos de 1 a 1000:
 
-/*
-for (let n = 1; n <= 1000; n++) {
+let numero = parseInt(prompt("Digite um número inteiro: "))
+
+for (let n = 1; n <= numero; n++) { // testa um por um por um pra ver qual é perfeito
     let soma = 0
 
-    for (let d = 1; d < n; d++) {
-        if (n % d === 0) {
+    for (let d = 1; d < n; d++) { // testa os divisores (o d é o divisor)
+        if (n % d === 0) { // verifica se é divisor 
             soma += d
         }
     }
 
-    if (soma === n) {
-        console.log("O número " + n + " é perfeito.")
-    }
-}
-*/
+    if (soma === n) { // verificação do número perfeito
+        const numerosPerfeitos = n
+        let mensagem = ("Os números perfeitos são: " + numerosPerfeitos)
+    } 
+} console.lo(mensagem)
