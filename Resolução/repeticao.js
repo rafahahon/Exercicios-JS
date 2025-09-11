@@ -159,7 +159,7 @@ for (let n = 1; n <= numero; n++) { // testa um por um por um pra ver qual é pe
     }
 
     if (soma === n) { // verificação do número perfeito
-        const numerosPerfeitos = n
-        let mensagem = ("Os números perfeitos são: " + numerosPerfeitos)
+        console.log("Os números perfeitos são: " + n)
     } 
-} console.lo(mensagem)
+
+} 
